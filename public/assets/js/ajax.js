@@ -53,7 +53,7 @@ var questions = [
 
 var currentQuestionIndex = 0;
 var currentQuestion;
-var time = 7*1000;
+var time = 20*1000;
 var timer;
 var score = 0;
 var data = 0;
@@ -65,7 +65,7 @@ function countDown(){
 		$('#time').text(time/1000);
 
 		if (time == 0){
-			time = 7 * 1000;
+			time = 20 * 1000;
 			$('#time').text(time/1000);
 
 			currentQuestionIndex++;
@@ -137,7 +137,7 @@ $(document).on('click', '.answer', function(){
 
 	if (currentQuestionIndex <= questions.length - 1){
 		loadQuestion();
-		time = 1000 * 7;
+		time = 1000 * 20;
 		$('#time').text(time/1000);
 	}else{
 
